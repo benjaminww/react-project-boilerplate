@@ -15,5 +15,5 @@ Simple React Project Setup using React, Webpack, and Babel.
 * `git clone https://github.com/benjaminww/react-project-boilerplate.git`
 * cd react-project-boilerplate
 * npm install
-* npm start
+* npm run dev
 * visit `http://localhost:8080/`
