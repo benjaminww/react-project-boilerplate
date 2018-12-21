@@ -1,6 +1,10 @@
 const webpack = require('webpack');
 
 module.exports = {
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  },
   entry: './src/index.js',
   module: {
     rules: [
@@ -11,9 +15,6 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
-  },
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
@@ -22,8 +23,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  devServer: {
-    contentBase: './dist',
-    hot: true
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   }
 };
