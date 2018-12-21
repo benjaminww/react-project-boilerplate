@@ -10,16 +10,19 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.5"
   },
   "keywords": [],
   "license": "ISC",
   "main": "index.js",
   "name": "react-project-boilerplate",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "version": "1.0.0"
 }
